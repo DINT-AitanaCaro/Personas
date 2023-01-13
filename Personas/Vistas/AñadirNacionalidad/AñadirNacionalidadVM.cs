@@ -11,5 +11,10 @@ namespace Personas.Vistas.AñadirNacionalidad
         public AñadirNacionalidadVM()
         {
         }
+
+        public void AñadeNacionalidad()
+        {
+
+        }
     }
 }

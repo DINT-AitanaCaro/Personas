@@ -84,6 +84,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Servicios\ServiceNavegacion.cs" />
+    <Compile Include="Servicios\ServiceNacionalidad.cs" />
     <Compile Include="Servicios\ServicePersonas.cs" />
     <Compile Include="Vistas\AñadirNacionalidad\AñadirNacionalidad.xaml.cs">
       <DependentUpon>AñadirNacionalidad.xaml</DependentUpon>
