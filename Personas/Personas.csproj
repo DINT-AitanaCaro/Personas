@@ -93,6 +93,7 @@
     <Compile Include="Vistas\ListadoPersonas\UserControlListadoPersonas.xaml.cs">
       <DependentUpon>UserControlListadoPersonas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\ListadoPersonas\UserControlListadoPersonaVM.cs" />
     <Compile Include="Vistas\MainWindow\MainWindowVM.cs" />
     <Compile Include="Vistas\NuevaPersona\UserControlNuevaPersonaVM.cs" />
     <Compile Include="Vistas\NuevaPersona\UserControlNuevaPersona.xaml.cs">

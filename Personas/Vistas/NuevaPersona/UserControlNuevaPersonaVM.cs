@@ -12,6 +12,7 @@ namespace Personas.Vistas.NuevaPersona
     class UserControlNuevaPersonaVM : ObservableObject
     {
         private ServiceNavegacion sn;
+        private ServiceNacionalidad serviceNacionalidad;
         private ObservableCollection<string> _nacionalidades;
 
         public ObservableCollection<string> Nacionalidades
@@ -23,18 +24,13 @@ namespace Personas.Vistas.NuevaPersona
         public UserControlNuevaPersonaVM()
         {
             sn = new ServiceNavegacion();
-            Nacionalidades = new ObservableCollection<string> { "Italiana", "Española", "Francesa" };
+            serviceNacionalidad = new ServiceNacionalidad();
+            Nacionalidades = serviceNacionalidad.GetNacionalidades();
         }
 
         public void AbreVentanaAñadirNacionalidad()
         {
-            if(sn.AbrirVentanaAñadirNacionalidad() == true)
-            {
-
-            } else
-            {
-
-            }
+            sn.AbrirVentanaAñadirNacionalidad();
         }
     }
 }

@@ -23,7 +23,7 @@
         <StackPanel Style="{StaticResource smallStackPanel}">
             <TextBlock>Nacionalidad</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="150" Margin="0,5,5,5" ItemsSource="{Binding Path=Nacionalidades}"></ComboBox>
+                <ComboBox Width="150" Margin="0,5,5,5" ItemsSource="{Binding Path=Nacionalidades, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
                 <Button x:Name="añadirNacionalidadButton" Height="22" Width="22" Click="añadirNacionalidadButton_Click">+</Button>
             </StackPanel>
         </StackPanel>

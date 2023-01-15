@@ -6,7 +6,16 @@
              xmlns:local="clr-namespace:Personas.Vistas.ListadoPersonas"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate x:Key="plantillaPersonas">
+            <StackPanel>
+                <TextBlock Text="{Binding Path=Nombre}"/>
+                <TextBlock Text="{Binding Path=Edad}"/>
+                <TextBlock Text="{Binding Path=Nacionalidad}"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
     <StackPanel>
-        <ListBox ItemsSource="{Binding Personas}"></ListBox>
+        <ListBox ItemsSource="{Binding Path=Personas}" ItemTemplate="{StaticResource plantillaPersonas}"></ListBox>
     </StackPanel>
 </UserControl>

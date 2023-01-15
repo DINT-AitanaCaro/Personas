@@ -29,7 +29,7 @@ namespace Personas.Vistas.NuevaPersona
 
         private void añadirNacionalidadButton_Click(object sender, RoutedEventArgs e)
         {
-
+            vm.AbreVentanaAñadirNacionalidad();
         }
     }
 }
