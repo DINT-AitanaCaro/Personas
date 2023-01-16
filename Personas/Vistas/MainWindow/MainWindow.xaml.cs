@@ -27,15 +27,5 @@ namespace Personas
             InitializeComponent();
             DataContext = vm;
         }
-
-        private void nuevaPersonaButton_Click(object sender, RoutedEventArgs e)
-        {
-            vm.CargarUCNuevaPersona();
-        }
-
-        private void listadoPersonasButton_Click(object sender, RoutedEventArgs e)
-        {
-            vm.CargarUCListadoPersonas();
-        }
     }
 }

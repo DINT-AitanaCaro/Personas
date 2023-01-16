@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace Personas.Vistas.AñadirNacionalidad
 {
-    class AñadirNacionalidadVM :ObservableObject
+    class WindowAñadirNacionalidadVM : ObservableObject
     {
+        
         private string _nuevaNacionalidad;
 
         public string NuevaNacionalidad
@@ -18,7 +19,7 @@ namespace Personas.Vistas.AñadirNacionalidad
             get { return _nuevaNacionalidad; }
             set { SetProperty(ref _nuevaNacionalidad, value); }
         }
-
+        /*
         private ObservableCollection<string> _nacionalidades;
 
         public ObservableCollection<string> Nacionalidades
@@ -26,17 +27,17 @@ namespace Personas.Vistas.AñadirNacionalidad
             get { return _nacionalidades; }
             set { SetProperty(ref _nacionalidades,value); }
         }
-
+        */
         private ServiceNacionalidad serviceNacionalidad;
-        public AñadirNacionalidadVM()
+        public WindowAñadirNacionalidadVM()
         {
             serviceNacionalidad = new ServiceNacionalidad();
-            Nacionalidades = serviceNacionalidad.GetNacionalidades();
+            //Nacionalidades = serviceNacionalidad.GetNacionalidades();
         }
 
         public void AñadeNacionalidad()
         {
-            serviceNacionalidad.GetNacionalidades().Add(NuevaNacionalidad);
+            //serviceNacionalidad.GetNacionalidades().Add(NuevaNacionalidad);
         }
     }
 }

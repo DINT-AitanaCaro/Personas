@@ -36,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>assets\personas.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommunityToolkit.Mvvm, Version=8.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
       <HintPath>..\packages\CommunityToolkit.Mvvm.8.0.0\lib\netstandard2.0\CommunityToolkit.Mvvm.dll</HintPath>
@@ -86,20 +89,20 @@
     <Compile Include="Servicios\ServiceNavegacion.cs" />
     <Compile Include="Servicios\ServiceNacionalidad.cs" />
     <Compile Include="Servicios\ServicePersonas.cs" />
-    <Compile Include="Vistas\AñadirNacionalidad\AñadirNacionalidad.xaml.cs">
-      <DependentUpon>AñadirNacionalidad.xaml</DependentUpon>
+    <Compile Include="Vistas\AñadirNacionalidad\WindowAñadirNacionalidad.xaml.cs">
+      <DependentUpon>WindowAñadirNacionalidad.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\AñadirNacionalidad\AñadirNacionalidadVM.cs" />
+    <Compile Include="Vistas\AñadirNacionalidad\WindowAñadirNacionalidadVM.cs" />
     <Compile Include="Vistas\ListadoPersonas\UserControlListadoPersonas.xaml.cs">
       <DependentUpon>UserControlListadoPersonas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ListadoPersonas\UserControlListadoPersonaVM.cs" />
+    <Compile Include="Vistas\ListadoPersonas\UserControlListadoPersonasVM.cs" />
     <Compile Include="Vistas\MainWindow\MainWindowVM.cs" />
     <Compile Include="Vistas\NuevaPersona\UserControlNuevaPersonaVM.cs" />
     <Compile Include="Vistas\NuevaPersona\UserControlNuevaPersona.xaml.cs">
       <DependentUpon>UserControlNuevaPersona.xaml</DependentUpon>
     </Compile>
-    <Page Include="Vistas\AñadirNacionalidad\AñadirNacionalidad.xaml">
+    <Page Include="Vistas\AñadirNacionalidad\WindowAñadirNacionalidad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Personas" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="{x:Type Button}" x:Key="generalButton">
             <Setter Property="Margin" Value="5"/>
@@ -14,8 +14,8 @@
     </Window.Resources>
     <DockPanel Margin="10">
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button x:Name="nuevaPersonaButton" Style="{StaticResource generalButton}" Click="nuevaPersonaButton_Click">Nueva Persona</Button>
-            <Button x:Name="listadoPersonasButton" Style="{StaticResource generalButton}" Click="listadoPersonasButton_Click">Listado de personas</Button>
+            <Button x:Name="nuevaPersonaButton" Style="{StaticResource generalButton}" Command="{Binding Path=CommandNuevaPersona}">Nueva Persona</Button>
+            <Button x:Name="listadoPersonasButton" Style="{StaticResource generalButton}" Command="{Binding Path=CommandListadoPersonas}">Listado de personas</Button>
         </StackPanel>
         <Border BorderBrush="Black" BorderThickness="2" Padding="10">
             <ContentControl Content="{Binding Path=ContenidoMostrar}"></ContentControl>

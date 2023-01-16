@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Personas.classes;
 using Personas.Servicios;
 using Personas.Vistas.ListadoPersonas;
@@ -24,6 +25,8 @@ namespace Personas.Vistas.MainWindow
         }
         */
         private ServiceNavegacion sn;
+        public RelayCommand CommandNuevaPersona { get;  }
+        public RelayCommand CommandListadoPersonas { get;  }
         private UserControlListadoPersonas ucnuevapersona;
         private UserControl contenidoMostrar;
 
@@ -35,6 +38,8 @@ namespace Personas.Vistas.MainWindow
         public MainWindowVM()
         {
             sn = new ServiceNavegacion();
+            CommandNuevaPersona = new RelayCommand(CargarUCNuevaPersona);
+            CommandListadoPersonas = new RelayCommand(CargarUCListadoPersonas);
             ucnuevapersona = new UserControlListadoPersonas();
             //Personas = new ObservableCollection<Persona>() { new Persona("Pietro", 30, "Italiana") };
         }

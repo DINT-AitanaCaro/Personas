@@ -26,10 +26,5 @@ namespace Personas.Vistas.NuevaPersona
             InitializeComponent();
             DataContext = vm;
         }
-
-        private void añadirNacionalidadButton_Click(object sender, RoutedEventArgs e)
-        {
-            vm.AbreVentanaAñadirNacionalidad();
-        }
     }
 }

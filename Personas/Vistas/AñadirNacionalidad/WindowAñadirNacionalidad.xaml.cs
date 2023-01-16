@@ -19,7 +19,7 @@ namespace Personas.Vistas.AñadirNacionalidad
     /// </summary>
     public partial class AñadirNacionalidad : Window
     {
-        AñadirNacionalidadVM vm = new AñadirNacionalidadVM();
+        WindowAñadirNacionalidadVM vm = new WindowAñadirNacionalidadVM();
         public AñadirNacionalidad()
         {
             InitializeComponent();

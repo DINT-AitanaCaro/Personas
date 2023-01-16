@@ -24,9 +24,9 @@
             <TextBlock>Nacionalidad</TextBlock>
             <StackPanel Orientation="Horizontal">
                 <ComboBox Width="150" Margin="0,5,5,5" ItemsSource="{Binding Path=Nacionalidades, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
-                <Button x:Name="añadirNacionalidadButton" Height="22" Width="22" Click="añadirNacionalidadButton_Click">+</Button>
-            </StackPanel>
+                <Button x:Name="añadirNacionalidadButton" Height="22" Width="22" Command="{Binding Path=CommandNuevaNacionalidad}">+</Button>
+            </StackPanel> 
         </StackPanel>
-        <Button x:Name="aceptarPersonaButton" Width="150" HorizontalAlignment="Left" Margin="10">Aceptar</Button>
+        <Button x:Name="aceptarPersonaButton" Width="150" HorizontalAlignment="Left" Margin="10" Command="{Binding Path=CommandNuevaPersona}">Aceptar</Button>
     </StackPanel>
 </UserControl>

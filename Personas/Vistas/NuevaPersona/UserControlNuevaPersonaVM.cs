@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Personas.Servicios;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace Personas.Vistas.NuevaPersona
     {
         private ServiceNavegacion sn;
         private ServiceNacionalidad serviceNacionalidad;
+        public RelayCommand CommandNuevaNacionalidad { get; }
+        public RelayCommand CommandNuevaPersona { get; }
         private ObservableCollection<string> _nacionalidades;
 
         public ObservableCollection<string> Nacionalidades
@@ -26,11 +29,18 @@ namespace Personas.Vistas.NuevaPersona
             sn = new ServiceNavegacion();
             serviceNacionalidad = new ServiceNacionalidad();
             Nacionalidades = serviceNacionalidad.GetNacionalidades();
+            CommandNuevaNacionalidad = new RelayCommand(AbreVentanaAñadirNacionalidad);
+            CommandNuevaPersona = new RelayCommand(CrearNuevaPersona);
         }
 
         public void AbreVentanaAñadirNacionalidad()
         {
-            sn.AbrirVentanaAñadirNacionalidad();
+            bool? resultado = sn.AbrirVentanaAñadirNacionalidad();
+        }
+
+        public void CrearNuevaPersona()
+        {
+
         }
     }
 }
