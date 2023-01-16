@@ -13,7 +13,6 @@ namespace Personas.Vistas.NuevaPersona
     class UserControlNuevaPersonaVM : ObservableObject
     {
         private ServiceNavegacion sn;
-        private ServiceNacionalidad serviceNacionalidad;
         public RelayCommand CommandNuevaNacionalidad { get; }
         public RelayCommand CommandNuevaPersona { get; }
         private ObservableCollection<string> _nacionalidades;
@@ -27,8 +26,7 @@ namespace Personas.Vistas.NuevaPersona
         public UserControlNuevaPersonaVM()
         {
             sn = new ServiceNavegacion();
-            serviceNacionalidad = new ServiceNacionalidad();
-            Nacionalidades = serviceNacionalidad.GetNacionalidades();
+            Nacionalidades = new ObservableCollection<string> { "Italiana", "Española", "Francesa" };
             CommandNuevaNacionalidad = new RelayCommand(AbreVentanaAñadirNacionalidad);
             CommandNuevaPersona = new RelayCommand(CrearNuevaPersona);
         }

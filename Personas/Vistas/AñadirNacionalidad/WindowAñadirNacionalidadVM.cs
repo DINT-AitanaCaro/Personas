@@ -19,25 +19,15 @@ namespace Personas.Vistas.AñadirNacionalidad
             get { return _nuevaNacionalidad; }
             set { SetProperty(ref _nuevaNacionalidad, value); }
         }
-        /*
-        private ObservableCollection<string> _nacionalidades;
 
-        public ObservableCollection<string> Nacionalidades
-        {
-            get { return _nacionalidades; }
-            set { SetProperty(ref _nacionalidades,value); }
-        }
-        */
-        private ServiceNacionalidad serviceNacionalidad;
         public WindowAñadirNacionalidadVM()
         {
-            serviceNacionalidad = new ServiceNacionalidad();
-            //Nacionalidades = serviceNacionalidad.GetNacionalidades();
+            
         }
 
         public void AñadeNacionalidad()
         {
-            //serviceNacionalidad.GetNacionalidades().Add(NuevaNacionalidad);
+            //
         }
     }
 }
