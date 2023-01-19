@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Personas.classes
 {
-    class Persona : ObservableObject
+    public class Persona : ObservableObject
     {
 
         private string _nombre;
@@ -18,28 +18,33 @@ namespace Personas.classes
             set { SetProperty(ref _nombre, value); }
         }
 
-        private int _edad;
+        private int? _edad;
 
-        public int Edad
+        public int? Edad
         {
             get { return _edad; }
             set { SetProperty(ref _edad, value); }
         }
 
         
-        private string _nacionalidades;
+        private string _nacionalidad;
+
+        public Persona()
+        {
+            Edad = null;
+        }
 
         public Persona(string nombre, int edad, string nacionalidades)
         {
             _nombre = nombre;
             _edad = edad;
-            _nacionalidades = nacionalidades;
+            _nacionalidad = nacionalidades;
         }
 
         public string Nacionalidad
         {
-            get { return _nacionalidades; }
-            set { SetProperty(ref _nacionalidades, value); }
+            get { return _nacionalidad; }
+            set { SetProperty(ref _nacionalidad, value); }
         }
     }
 }

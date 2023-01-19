@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using Personas.classes;
+using Personas.Mensajes;
 using Personas.Servicios;
 using System;
 using System.Collections.Generic;
@@ -23,12 +26,26 @@ namespace Personas.Vistas.NuevaPersona
             set { SetProperty(ref _nacionalidades, value); }
         }
 
+        private Persona _nuevaPersona;
+
+        public Persona NuevaPersona
+        {
+            get { return _nuevaPersona; }
+            set { SetProperty(ref _nuevaPersona, value); }
+        }
+
         public UserControlNuevaPersonaVM()
         {
+            NuevaPersona = new Persona();
             sn = new ServiceNavegacion();
             Nacionalidades = new ObservableCollection<string> { "Italiana", "Española", "Francesa" };
             CommandNuevaNacionalidad = new RelayCommand(AbreVentanaAñadirNacionalidad);
             CommandNuevaPersona = new RelayCommand(CrearNuevaPersona);
+
+            WeakReferenceMessenger.Default.Register<NuevaNacionalidadValueChangedMessage>(this, (r, m) =>
+            {
+                Nacionalidades.Add(m.Value);
+            });
         }
 
         public void AbreVentanaAñadirNacionalidad()
@@ -38,7 +55,7 @@ namespace Personas.Vistas.NuevaPersona
 
         public void CrearNuevaPersona()
         {
-
+            WeakReferenceMessenger.Default.Send(new NuevaPersonaValueChangedMessage(NuevaPersona));
         }
     }
 }

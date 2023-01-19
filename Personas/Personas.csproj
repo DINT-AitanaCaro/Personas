@@ -86,6 +86,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mensajes\NuevaNacionalidadValueChangedMessage.cs" />
+    <Compile Include="Mensajes\NuevaPersonaValueChangedMessage.cs" />
+    <Compile Include="Mensajes\PersonaSeleccionadaRequestMessage.cs" />
     <Compile Include="Servicios\ServiceNavegacion.cs" />
     <Compile Include="Vistas\AñadirNacionalidad\WindowAñadirNacionalidad.xaml.cs">
       <DependentUpon>WindowAñadirNacionalidad.xaml</DependentUpon>
@@ -100,6 +103,10 @@
     <Compile Include="Vistas\NuevaPersona\UserControlNuevaPersona.xaml.cs">
       <DependentUpon>UserControlNuevaPersona.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\UserControlConsultaPersona\UserControlConsultaPersona.xaml.cs">
+      <DependentUpon>UserControlConsultaPersona.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\UserControlConsultaPersona\UserControlConsultaPersonaVM.cs" />
     <Page Include="Vistas\AñadirNacionalidad\WindowAñadirNacionalidad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +129,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Vistas\NuevaPersona\UserControlNuevaPersona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\UserControlConsultaPersona\UserControlConsultaPersona.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,9 +168,7 @@
     <Resource Include="assets\añadir.ico" />
     <Resource Include="assets\personas.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mensajes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('..\packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

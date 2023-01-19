@@ -1,6 +1,7 @@
 ﻿using Personas.Vistas.AñadirNacionalidad;
 using Personas.Vistas.ListadoPersonas;
 using Personas.Vistas.NuevaPersona;
+using Personas.Vistas.UserControlConsultaPersona;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,11 @@ namespace Personas.Servicios
         public UserControl CargarUCListadoPersonas()
         {
             return new UserControlListadoPersonas();
+        }
+
+        public UserControl CargarUCConsultaPersona()
+        {
+            return new UserControlConsultaPersona();
         }
 
         public bool? AbrirVentanaAñadirNacionalidad()

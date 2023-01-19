@@ -1,4 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using Personas.Mensajes;
 using Personas.Servicios;
 using System;
 using System.Collections.Generic;
@@ -11,7 +14,7 @@ namespace Personas.Vistas.AñadirNacionalidad
 {
     class WindowAñadirNacionalidadVM : ObservableObject
     {
-        
+        //public RelayCommand CommandNuevaNacionalidad { get; }
         private string _nuevaNacionalidad;
 
         public string NuevaNacionalidad
@@ -22,12 +25,12 @@ namespace Personas.Vistas.AñadirNacionalidad
 
         public WindowAñadirNacionalidadVM()
         {
-            
+            //CommandNuevaNacionalidad = new RelayCommand(AñadeNacionalidad);
         }
 
         public void AñadeNacionalidad()
         {
-            //
+            WeakReferenceMessenger.Default.Send(new NuevaNacionalidadValueChangedMessage(NuevaNacionalidad));
         }
     }
 }

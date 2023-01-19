@@ -14,16 +14,16 @@
     <StackPanel>
         <StackPanel Style="{StaticResource smallStackPanel}">
             <TextBlock>Nombre</TextBlock>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding Path=NuevaPersona.Nombre, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         </StackPanel>
         <StackPanel Style="{StaticResource smallStackPanel}">
             <TextBlock>Edad</TextBlock>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding Path=NuevaPersona.Edad, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         </StackPanel>
         <StackPanel Style="{StaticResource smallStackPanel}">
             <TextBlock>Nacionalidad</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="150" Margin="0,5,5,5" ItemsSource="{Binding Path=Nacionalidades, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
+                <ComboBox Width="150" Margin="0,5,5,5" ItemsSource="{Binding Path=Nacionalidades, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=NuevaPersona.Nacionalidad, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
                 <Button x:Name="añadirNacionalidadButton" Height="22" Width="22" Command="{Binding Path=CommandNuevaNacionalidad}">+</Button>
             </StackPanel> 
         </StackPanel>

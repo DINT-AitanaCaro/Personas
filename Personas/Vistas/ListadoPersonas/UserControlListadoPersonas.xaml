@@ -18,6 +18,6 @@
         </DataTemplate>
     </UserControl.Resources>
     <StackPanel>
-        <ListBox ItemsSource="{Binding Path=Personas}" ItemTemplate="{StaticResource plantillaPersonas}"></ListBox>
+        <ListBox ItemsSource="{Binding Path=Personas}" ItemTemplate="{StaticResource plantillaPersonas}" SelectedItem="{Binding Path=PersonaSeleccionada, UpdateSourceTrigger=PropertyChanged}"></ListBox>
     </StackPanel>
 </UserControl>

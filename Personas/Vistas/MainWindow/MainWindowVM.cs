@@ -27,6 +27,7 @@ namespace Personas.Vistas.MainWindow
         private ServiceNavegacion sn;
         public RelayCommand CommandNuevaPersona { get;  }
         public RelayCommand CommandListadoPersonas { get;  }
+        public RelayCommand CommandConsultaPersona  { get;  }
         private UserControlListadoPersonas ucnuevapersona;
         private UserControl contenidoMostrar;
 
@@ -40,8 +41,8 @@ namespace Personas.Vistas.MainWindow
             sn = new ServiceNavegacion();
             CommandNuevaPersona = new RelayCommand(CargarUCNuevaPersona);
             CommandListadoPersonas = new RelayCommand(CargarUCListadoPersonas);
+            CommandConsultaPersona = new RelayCommand(CargarUCConsultaPersona);
             ucnuevapersona = new UserControlListadoPersonas();
-            //Personas = new ObservableCollection<Persona>() { new Persona("Pietro", 30, "Italiana") };
         }
 
         public void CargarUCNuevaPersona()
@@ -52,6 +53,11 @@ namespace Personas.Vistas.MainWindow
         public void CargarUCListadoPersonas()
         {
             ContenidoMostrar = ucnuevapersona;
+        }
+
+        public void CargarUCConsultaPersona()
+        {
+            ContenidoMostrar = sn.CargarUCConsultaPersona();
         }
     }
 }

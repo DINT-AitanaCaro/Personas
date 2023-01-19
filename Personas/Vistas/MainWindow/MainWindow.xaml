@@ -16,6 +16,7 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
             <Button x:Name="nuevaPersonaButton" Style="{StaticResource generalButton}" Command="{Binding Path=CommandNuevaPersona}">Nueva Persona</Button>
             <Button x:Name="listadoPersonasButton" Style="{StaticResource generalButton}" Command="{Binding Path=CommandListadoPersonas}">Listado de personas</Button>
+            <Button x:Name="consultaPersonaButton" Style="{StaticResource generalButton}" Command="{Binding Path=CommandConsultaPersona}">Consulta de persona</Button>
         </StackPanel>
         <Border BorderBrush="Black" BorderThickness="2" Padding="10">
             <ContentControl Content="{Binding Path=ContenidoMostrar}"></ContentControl>
